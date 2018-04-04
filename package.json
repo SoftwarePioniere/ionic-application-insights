@@ -1,0 +1,71 @@
+{
+  "name": "@softwarepioniere/ionic-application-insights",
+  "version": "1.0.0",
+  "scripts": {
+    "lint": "tslint -p tsconfig.json",
+    "clean": "rimraf ./dist",
+    "build": "npm run clean && npm run tsc && ngc",
+    "tsc": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SoftwarePioniere/ionic-application-insights"
+  },
+  "author": {
+    "name": "Mark Pieszak",
+    "email": "mpieszak84@gmail.com"
+  },
+  "contributors": [
+    {
+      "name": "Torsten Zwoch",
+      "email": "tz@softwarepioniere.de",
+      "url": "http://softwarepioniere.de/"
+    }
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SoftwarePioniere/ionic-application-insights/issues"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "dependencies": {
+    "@angular/common": "5.2.1",
+    "@angular/core": "5.2.1",
+    "@angular/forms": "5.2.1",
+    "@types/applicationinsights-js": "^1.0.5",
+    "applicationinsights-js": "^1.0.15",
+    "ionic-angular": "^3.9.2"
+  },
+  "peerDependencies": {
+    "ionic-angular": "3.9.2",
+    "rxjs": "^5.5.5"
+  },
+  "devDependencies": {
+    "@angular/cli": "^1.4.1",
+    "@angular/common": "^5.2.1",
+    "@angular/compiler": "^5.2.1",
+    "@angular/compiler-cli": "^5.2.1",
+    "@angular/core": "^4.4.6",
+    "@angular/platform-browser": "^4.0.0",
+    "codelyzer": "^3.1.2",
+    "rimraf": "^2.5.4",
+    "rxjs": "^5.0.3",
+    "tslint": "^5.7.0",
+    "typescript": "^2.5.2",
+    "zone.js": "^0.8.17"
+  },
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "keywords": [
+    "angular2",
+    "ionic2",
+    "ionic3",
+    "ms application insights",
+    "application insights",
+    "angular application insights",
+    "microsoft application insights",
+    "ms app insights",
+    "aspnet core app insights"
+  ]
+}
