@@ -1,4 +1,13 @@
 # CHANGELOG
+#1.0.3
+- Eleminate bugs
+
+#1.0.2
+- Eleminate bugs
+
+#1.0.1
+- Eleminate bugs 
+
 #1.0.0
 - remove angular router module
 - add ionic and change page events to ionic style 

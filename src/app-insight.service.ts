@@ -2,7 +2,7 @@ import {Injectable, Optional} from '@angular/core';
 import {AppInsights} from 'applicationinsights-js';
 
 import IAppInsights = Microsoft.ApplicationInsights.IAppInsights;
-import {NavController} from "ionic-angular";
+import {App} from "ionic-angular";
 
 export class AppInsightsConfig implements Microsoft.ApplicationInsights.IConfig {
     instrumentationKeySetlater?: boolean;
@@ -35,17 +35,17 @@ export class AppInsightsConfig implements Microsoft.ApplicationInsights.IConfig 
     url?: string;
     isStorageUseDisabled?: boolean;
     overrideTrackPageMetrics?: boolean;
+
 }
 
 @Injectable()
 export class AppInsightsService implements IAppInsights {
-
     context: Microsoft.ApplicationInsights.ITelemetryContext;
     queue: Array<() => void>;
     config: AppInsightsConfig;
 
     constructor(@Optional() _config: AppInsightsConfig,
-                public navController: NavController) {
+                public app: App) {
         this.config = _config;
     }
 
@@ -214,19 +214,19 @@ export class AppInsightsService implements IAppInsights {
             if (this.config.instrumentationKey) {
                 try {
                     AppInsights.downloadAndSetup(this.config);
-
                     if (!this.config.overrideTrackPageMetrics) {
-                        this.navController.viewDidEnter.subscribe((event: any) => {
-                            this.startTrackPage(event.url);
+                        this.app.viewDidEnter.subscribe((event: any) => {
+                            this.startTrackPage(event.component.name);
                         });
 
-                        this.navController.viewDidLeave.subscribe((event: any) => {
-                            this.stopTrackPage(event.url);
+                        this.app.viewDidLeave.subscribe((event: any) => {
+                            this.stopTrackPage(event.component.name);
                         });
                     }
 
                     this.queue = AppInsights.queue;
                     this.context = AppInsights.context;
+
                 } catch (ex) {
                     console.warn('Angular application insights Error [downloadAndSetup]: ', ex);
                 }

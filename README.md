@@ -9,7 +9,7 @@ If you need a implementation for Angular 5+ you could find it [here](https://git
 Install & save the library to your package.json:
 
 ```bash
-$ npm i -S @markpieszak/ng-application-insights
+$ npm i -S @softwarepioniere/ionic-application-insights
 ```
 
 Then add the library to your Angular Root `AppModule`:
