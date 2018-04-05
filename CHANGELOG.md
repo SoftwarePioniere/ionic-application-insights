@@ -1,6 +1,6 @@
 # CHANGELOG
 #1.0.3
-- Eleminate bugs
+- Change dependencies
 
 #1.0.2
 - Eleminate bugs
