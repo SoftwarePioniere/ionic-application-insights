@@ -59,7 +59,7 @@ constructor(
 Through out your application you can now use the AppInsightsService class to fire off AppInsights functionality.
 
 ```typescript
-import { AppInsightsService } from '@markpieszak/ng-application-insights';
+import { AppInsightsService } from '@softwarepioniere/ionic-application-insights';
 
 export class ShoppingCartComponent {
   public cart: [];
@@ -71,6 +71,29 @@ export class ShoppingCartComponent {
     this.appInsightsService.trackEvent('ShoppingCart Saved', { 'user': user.id, 'cart': cart.id });
   }
 }
+```
+
+## Usage with IONIC in production build
+
+If you build your app in production mode like
+
+```bash
+npm run build  
+```
+
+the code get minified and the page name was gone. In this case your must set a variable named _aiName_. If this variable is set, it was used as page name to send it to application insights. For Example 
+
+```typescript
+...
+@IonicPage()
+@Component({
+    selector: 'page-contact',
+    templateUrl: 'contact.page.html',
+})
+export class ContactPage {
+    private aiName: string = "ContactPage";
+    
+    ...
 ```
 
 ## Usage with Aspnetcore-Angular2-Universal repo or JavaScriptServices ( apps w/ Server-side rendering )
@@ -128,7 +151,7 @@ In System.Config.map, add:
 
 ```typescript
       'applicationinsights-js': 'npm:applicationinsights-js/JavaScript/JavaScriptSDK.Module/AppInsightsModule.js',
-      '@markpieszak/ng-application-insights': 'npm:@markpieszak/ng-application-insights/dist/index.js'
+      '@softwarepioniere/ionic-application-insights': 'npm:@softwarepioniere/ionic-application-insights/dist/index.js'
 ```
 
 and in System.Config.packages, add:
