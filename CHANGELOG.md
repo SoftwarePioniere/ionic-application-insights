@@ -1,4 +1,13 @@
 # CHANGELOG
+#1.0.6
+- Integrate aiName 
+
+#1.0.5
+- Bugs
+
+#1.0.4
+- Bugs
+
 #1.0.3
 - Change dependencies
 
