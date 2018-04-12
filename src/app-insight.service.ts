@@ -216,9 +216,9 @@ export class AppInsightsService implements IAppInsights {
                     AppInsights.downloadAndSetup(this.config);
                     if (!this.config.overrideTrackPageMetrics) {
                         this.app.viewDidEnter.subscribe((event: any) => {
-                            if (event.component.aiName != null && event.component.aiName != "") {
+                            if (event.component != null && event.component.aiName != null && event.component.aiName != "") {
                                 this.startTrackPage(event.component.aiName);
-                            } else if (event.instance.aiName != null && event.instance.aiName != "") {
+                            } else if (event.instance!=null && event.instance.aiName != null && event.instance.aiName != "") {
                                 // if: ionic build --prod --release
                                 this.startTrackPage(event.instance.aiName);
                             } else {
@@ -227,9 +227,9 @@ export class AppInsightsService implements IAppInsights {
                         });
 
                         this.app.viewDidLeave.subscribe((event: any) => {
-                            if (event.component.aiName != null && event.component.aiName != "") {
+                            if (event.component != null && event.component.aiName != null && event.component.aiName != "") {
                                 this.stopTrackPage(event.component.aiName);
-                            } else if (event.instance.aiName != null && event.instance.aiName != "") {
+                            } else if (event.instance!=null && event.instance.aiName != null && event.instance.aiName != "") {
                                 // if: ionic build --prod --release
                                 this.stopTrackPage(event.instance.aiName);
                             } else {

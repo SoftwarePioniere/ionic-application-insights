@@ -1,4 +1,7 @@
 # CHANGELOG
+#1.0.7
+- Check if "event.component != null" and "event.instance!=null"
+
 #1.0.6
 - Integrate aiName 
 
