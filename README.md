@@ -3,6 +3,9 @@
 This repository based on the implementation "Angular 5+ and Microsoft Azure Application Insights implementation" by [DevHelp.Online](http://www.DevHelp.Online) and was modified to use the solution with IONIC.
 If you need a implementation for Angular 5+ you could find it [here](https://github.com/MarkPieszak/angular-application-insights).
 
+## Documentation
+
+For complete documentation on setting up Azure and Ionic, visit our [Blog](https://softwarepioniere.wordpress.com/2018/04/16/ionic-und-azure-application-insights/)
 
 ## Installation
 
