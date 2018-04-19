@@ -1,6 +1,6 @@
 {
   "name": "@softwarepioniere/ionic-application-insights",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "scripts": {
     "lint": "tslint -p tsconfig.json",
     "clean": "rimraf ./dist",
@@ -29,14 +29,13 @@
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "dependencies": {
+    "@types/applicationinsights-js": "^1.0.5",
+    "applicationinsights-js": "^1.0.15"
+  },
+  "peerDependencies": {
     "@angular/common": "5.2.1",
     "@angular/core": "5.2.1",
     "@angular/forms": "5.2.1",
-    "@types/applicationinsights-js": "^1.0.5",
-    "applicationinsights-js": "^1.0.15",
-    "ionic-angular": "^3.9.2"
-  },
-  "peerDependencies": {
     "ionic-angular": "3.9.2",
     "rxjs": "^5.5.5"
   },

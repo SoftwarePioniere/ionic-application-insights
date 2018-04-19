@@ -1,4 +1,7 @@
 # CHANGELOG
+#1.0.8
+- Change Angular from dependency to peerDependency in package json.
+
 #1.0.7
 - Check if "event.component != null" and "event.instance!=null"
 
