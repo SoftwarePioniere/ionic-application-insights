@@ -1,4 +1,7 @@
 # CHANGELOG
+#1.0.9
+- Change version parameter of dependencies.
+
 #1.0.8
 - Change Angular from dependency to peerDependency in package json.
 
